@@ -3,10 +3,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from './components/pages/Home'
 import { About } from './components/pages/About'
 import { Contact } from './components/pages/Contact'
-
+import GlobalStyle from './GlobalStyle'
 function App() {
   return (
-    <div>
+    <>
+      <GlobalStyle />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar />}>
@@ -16,7 +17,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   )
 }
 

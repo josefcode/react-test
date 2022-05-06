@@ -1,22 +1,24 @@
 import { Link, Outlet } from 'react-router-dom'
 
+import { Nav, Ul, Li, Logo } from './navbarStyle'
+
 export function Navbar() {
   return (
     <header>
-      <nav>
-        <h1>Bookkeeper</h1>
-        <ul>
-          <li>
+      <Nav>
+        <Logo>Bookkeeper</Logo>
+        <Ul>
+          <Li>
             <Link to="/">Home</Link>
-          </li>
+          </Li>
           <li>
             <Link to="/About">About</Link>
           </li>
           <li>
             <Link to="/Contact">Contact</Link>
           </li>
-        </ul>
-      </nav>
+        </Ul>
+      </Nav>
       <Outlet />
     </header>
   )
